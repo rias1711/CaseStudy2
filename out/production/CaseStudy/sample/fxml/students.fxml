@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="778.0" prefWidth="1227.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ControllerStudent">
+    <children>
+        <Pane prefHeight="139.0" prefWidth="1102.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="73.0" layoutY="30.0" text="Students" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="79.0" layoutY="91.0" text="School Mangement " textFill="WHITE">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+      <TableView fx:id="tableView" layoutX="89.0" layoutY="444.0" prefHeight="301.0" prefWidth="987.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="firstColumn" prefWidth="205.0" text="First Name" />
+            <TableColumn fx:id="lastColumn" prefWidth="233.0" text="Last Name" />
+            <TableColumn fx:id="classColumn" text="Class" />
+            <TableColumn fx:id="emailColumn" prefWidth="222.0" text="Email" />
+            <TableColumn fx:id="phoneColumn" prefWidth="168.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Button layoutX="892.0" layoutY="275.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="33.0" prefWidth="100.0" text="Add" />
+      <Button fx:id="btnEdit" layoutX="705.0" layoutY="405.0" mnemonicParsing="false" onAction="#editStudent" prefHeight="33.0" prefWidth="100.0" text="Edit" />
+      <Button layoutX="842.0" layoutY="405.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="33.0" prefWidth="100.0" text="Delete" />
+      <Button layoutX="976.0" layoutY="405.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="33.0" prefWidth="100.0" text="Back" />
+      <TextField fx:id="txtSearch" layoutX="89.0" layoutY="405.0" prefHeight="33.0" prefWidth="322.0" />
+      <Label layoutX="145.0" layoutY="184.0" text="Student ID" />
+      <Label layoutX="145.0" layoutY="233.0" text="First Name" />
+      <Label layoutX="146.0" layoutY="283.0" text="Class" />
+      <TextField fx:id="txtStudentID" layoutX="251.0" layoutY="180.0" />
+      <TextField fx:id="txtFirstName" layoutX="251.0" layoutY="229.0" />
+      <TextField fx:id="txtClass" layoutX="251.0" layoutY="279.0" />
+      <Label layoutX="514.0" layoutY="233.0" text="Last Name" />
+      <Label layoutX="145.0" layoutY="337.0" text="Email" />
+      <TextField fx:id="txtEmail" layoutX="251.0" layoutY="333.0" />
+      <TextField fx:id="txtLastName" layoutX="606.0" layoutY="229.0" />
+      <RadioButton fx:id="male" layoutX="576.0" layoutY="184.0" mnemonicParsing="false" selected="true" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="696.0" layoutY="184.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <ChoiceBox fx:id="choiceBox" layoutX="606.0" layoutY="279.0" prefWidth="150.0" />
+      <Label layoutX="513.0" layoutY="283.0" text="Course" />
+      <Label layoutX="514.0" layoutY="337.0" text="Phone" />
+      <TextField fx:id="txtPhone" layoutX="606.0" layoutY="333.0" />
+      <Button layoutX="419.0" layoutY="409.0" mnemonicParsing="false" onAction="#searchStudent" text="Search" />
+    </children>
+</AnchorPane>
